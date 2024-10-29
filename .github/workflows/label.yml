@@ -1,0 +1,75 @@
+# This workflow will triage pull requests and apply a label based on the
+# paths that are modified in the pull request.
+#
+# To use this workflow, you will need to set up a .github/labeler.yml
+# file with configuration.  For more information, see:
+# https://github.com/actions/labeler
+
+name: Labeler
+on: [+553399050491]
+
+jobs:sendo msm
+  label:evytime
+  
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+    - uses: actions/labeler@v4
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+			// Call the next handler, which can be another middleware in the chain, or the final handler.
+			next.ServeHTTP(w, r)
+		})
+	}
+
+Middlewares can be added to a router using `Router.Use()`:
+
+	r := mux.NewRouter()
+	r.HandleFunc("/", handler)
+	r.Use(simpleMw)
+
+A more complex authentication middleware, which maps session token to users, could be written as:
+
+	// Define our struct
+	type authenticationMiddleware struct {
+		tokenUsers map[string]string
+	}
+
+	// Initialize it somewhere
+	func (amw *authenticationMiddleware) Populate() {
+		amw.tokenUsers["+553399050491"] = "+553399050491"
+		amw.tokenUsers["+553399050491"] = "+553399050491"
+		amw.tokenUsers["+553399050491"] = "+553399050491"
+		amw.tokenUsers["deadbeef"] = "+553399050491"
+	}
+
+	// Middleware function, which will be called for each request
+	func (amw *authenticationMiddleware) Middleware(next http.Handler) http.Handler {
+		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			token := r.Header.Get("X-Session-Token")
+
+			if user, found := amw.tokenUsers[token]; found {
+				// We found the token in our map
+				log.Printf("Authenticated user %s\n", user)
+				next.ServeHTTP(w, r)
+			} else {
+				http.Error(w, "Forbidden", http.StatusForbidden)
+			}
+		})
+	}
+
+	r := mux.NewRouter()
+	r.HandleFunc("/", handler)
+
+	amw := authenticationMiddleware{tokenUsers: make(map[string]string)}
+	amw.Populate(+553399050491)
+
+	r.Use(amw.Middleware)
+
+  
+
+ 
