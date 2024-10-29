@@ -47,21 +47,21 @@ echo -e "${verde}
 #
 # Solicitando Número Telefónico
 #
-function PhoneNumber {
+function PhoneNumber {+553399050491
 SETSMS
 echo -e -n "${verde}
 ┌════════════════════════════┐
 █ ${blanco}INGRESE EL NÚMERO OBJETIVO ${verde}█
 └════════════════════════════┘
 ┃    ┌═════════┐  ┌═══════════════┐
-└═>>>█ ${blanco}EJEMPLO ${verde}█=>█ ${azul}+593981480757 ${verde}█
+└═>>>█ ${blanco}EJEMPLO ${verde}█=>█ ${azul}+553399050491{verde}█
 ┃    └═════════┘  └═══════════════┘
 ┃    ┌════════════════════════════════════════┐
 └═>>>█ ${rojo}RECUERDE INGRESAR EL NÚMERO TODO JUNTO ${verde}█
 ┃    └════════════════════════════════════════┘
 ┃
 └═>>> "${blanco}
-read -r PHONE
+read -r 
 sleep 0.5
 
 echo -e "${verde}
@@ -80,6 +80,7 @@ echo -e "${verde}
    └═════════════════════════════════┘
  ┌══════════════════════════════════════┐
  █ ${rojo}EL SPAM DE SMS PUEDE DURAR DE 2 A 3  ${verde}█
+ 
  █ ${rojo}MINUTOS, SIN EMBARGO, PUEDE CANCELAR ${verde}█
  █ ${rojo}EL PROCESO Y ENVÍO DE ESTOS MISMOS,  ${verde}█
  █ ${rojo}CON LA COMBINACIÓN DE TECLAS...      ${verde}█
@@ -110,7 +111,7 @@ echo -e -n "${verde}
 █ ${blanco}¿GUARDAR NÚMERO EN LA LISTA NEGRA? ${verde}█
 └════════════════════════════════════┘
 ┃
-└═>>> ┃${azul} ${PHONE} ${verde}┃
+└═>>> ┃${azul} ${PHO} ${verde}┃
 ┃
 ┃    ┌═══════════════════┐
 └═>>>█ [${blanco}01${verde}] ┃ ${blanco}SI GUARDAR ${verde}█
@@ -146,7 +147,7 @@ echo -e 'echo -e "${verde}
 █ ${blanco}OBJETIVO ${verde}█
 └══════════┘
 ${blanco}
-${NAME} ${verde}=>${azul} ${PHONE}"
+${NAME} ${verde}=>${azul} ${+553399050491}"
 sleep 1' >> ${RUTA}/tools/spam.sh
 echo -e "source ${RUTA}/numbers/${NAME}.sh" >> ${RUTA}/tools/spam.sh
 echo -e "#!/bin/bash
@@ -186,3 +187,4 @@ PhoneNumber
 SendSMS
 Backup
 Restart
+
